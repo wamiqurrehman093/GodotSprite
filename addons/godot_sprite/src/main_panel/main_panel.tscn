@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://wxjqiktylg8v"]
+[gd_scene load_steps=3 format=3 uid="uid://wxjqiktylg8v"]
 
 [ext_resource type="PackedScene" uid="uid://bjyw2xxsukkeh" path="res://addons/godot_sprite/src/menu_bar/menu_bar.tscn" id="1_cmnjq"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_60ona"]
 
 [node name="MainPanel" type="MarginContainer"]
 anchors_preset = 15
@@ -19,3 +21,95 @@ layout_mode = 2
 
 [node name="MenuBar" parent="Window" instance=ExtResource("1_cmnjq")]
 layout_mode = 2
+
+[node name="NewSpriteWindow" type="ConfirmationDialog" parent="."]
+title = "New Sprite"
+initial_position = 2
+size = Vector2i(360, 240)
+visible = true
+
+[node name="MarginContainer" type="MarginContainer" parent="NewSpriteWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NewSpriteWindow/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Size" type="VBoxContainer" parent="NewSpriteWindow/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Size"]
+layout_mode = 2
+text = "--Size:--------------------------------------------------------"
+clip_text = true
+
+[node name="Width" type="HBoxContainer" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Size"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Size/Width"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "Width:"
+
+[node name="LineEdit" type="LineEdit" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Size/Width"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16px"
+
+[node name="Height" type="HBoxContainer" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Size"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Size/Height"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "Height:"
+
+[node name="LineEdit" type="LineEdit" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Size/Height"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16px"
+
+[node name="Background" type="VBoxContainer" parent="NewSpriteWindow/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Background"]
+layout_mode = 2
+text = "--Background:--------------------------------------------"
+clip_text = true
+
+[node name="Options" type="HBoxContainer" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Background"]
+layout_mode = 2
+
+[node name="Transparent" type="Button" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Background/Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_60ona")
+text = "Transparent"
+
+[node name="Black" type="Button" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Background/Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_60ona")
+text = "Black"
+
+[node name="White" type="Button" parent="NewSpriteWindow/MarginContainer/VBoxContainer/Background/Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_60ona")
+text = "White"
