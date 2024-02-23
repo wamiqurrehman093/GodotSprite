@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjyw2xxsukkeh"]
+[gd_scene load_steps=3 format=3 uid="uid://bjyw2xxsukkeh"]
 
+[ext_resource type="Script" path="res://addons/godot_sprite/src/menu_bar/menu_bar.gd" id="1_nqm5y"]
 [ext_resource type="PackedScene" uid="uid://bm1rjd621gf7l" path="res://addons/godot_sprite/src/menu_bar/menu_buttons/file_menu_button/file_menu_button.tscn" id="1_q7wbc"]
 
 [node name="MenuBar" type="HBoxContainer"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 offset_bottom = 31.0
 grow_horizontal = 2
 size_flags_vertical = 0
+script = ExtResource("1_nqm5y")
 
 [node name="FileMenuButton" parent="." instance=ExtResource("1_q7wbc")]
 layout_mode = 2

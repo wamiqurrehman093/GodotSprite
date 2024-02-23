@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyl2ohvgl64ra"]
+
+[ext_resource type="PackedScene" uid="uid://bjyw2xxsukkeh" path="res://addons/godot_sprite/src/menu_bar/menu_bar.tscn" id="1_alydq"]
+[ext_resource type="Script" path="res://addons/godot_sprite/src/main_window/main_window.gd" id="1_pbjs2"]
+
+[node name="MainWindow" type="VBoxContainer"]
+script = ExtResource("1_pbjs2")
+
+[node name="MenuBar" parent="." instance=ExtResource("1_alydq")]
+layout_mode = 2

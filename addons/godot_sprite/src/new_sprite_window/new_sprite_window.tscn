@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=3 uid="uid://2kqj3tah3k3e"]
+
+[ext_resource type="Script" path="res://addons/godot_sprite/src/new_sprite_window/new_sprite_window.gd" id="1_on6m1"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_60ona"]
+
+[node name="NewSpriteWindow" type="ConfirmationDialog"]
+title = "New Sprite"
+initial_position = 2
+size = Vector2i(360, 240)
+visible = true
+script = ExtResource("1_on6m1")
+
+[node name="Panel" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Content" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Size" type="VBoxContainer" parent="Panel/Content"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Size"]
+layout_mode = 2
+text = "--Size:--------------------------------------------------------"
+clip_text = true
+
+[node name="Width" type="HBoxContainer" parent="Panel/Content/Size"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Size/Width"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "Width:"
+
+[node name="LineEdit" type="LineEdit" parent="Panel/Content/Size/Width"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16px"
+
+[node name="Height" type="HBoxContainer" parent="Panel/Content/Size"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Size/Height"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "Height:"
+
+[node name="LineEdit" type="LineEdit" parent="Panel/Content/Size/Height"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16px"
+
+[node name="Background" type="VBoxContainer" parent="Panel/Content"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Background"]
+layout_mode = 2
+text = "--Background:--------------------------------------------"
+clip_text = true
+
+[node name="Options" type="HBoxContainer" parent="Panel/Content/Background"]
+layout_mode = 2
+
+[node name="Transparent" type="Button" parent="Panel/Content/Background/Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_60ona")
+text = "Transparent"
+
+[node name="Black" type="Button" parent="Panel/Content/Background/Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_60ona")
+text = "Black"
+
+[node name="White" type="Button" parent="Panel/Content/Background/Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_60ona")
+text = "White"
