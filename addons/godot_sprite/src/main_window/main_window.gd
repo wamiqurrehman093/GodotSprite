@@ -10,3 +10,7 @@ func _ready():
 
 func _on_menu_option_selected(context):
 	menu_option_selected.emit(context)
+
+
+func create_new_sprite(context: Dictionary):
+	print(context)
