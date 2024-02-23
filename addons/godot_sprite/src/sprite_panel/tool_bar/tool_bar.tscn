@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7y5mq5jlajls"]
+
+[ext_resource type="Script" path="res://addons/godot_sprite/src/sprite_panel/tool_bar/tool_bar.gd" id="1_meisf"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_11wvw"]
+
+[node name="ToolBar" type="VBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+script = ExtResource("1_meisf")
+
+[node name="BrushToolButton" type="Button" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_11wvw")
+text = "B"
+
+[node name="EraserToolButton" type="Button" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+toggle_mode = true
+button_group = SubResource("ButtonGroup_11wvw")
+text = "E"

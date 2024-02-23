@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyl2ohvgl64ra"]
+[gd_scene load_steps=4 format=3 uid="uid://dyl2ohvgl64ra"]
 
 [ext_resource type="PackedScene" uid="uid://bjyw2xxsukkeh" path="res://addons/godot_sprite/src/menu_bar/menu_bar.tscn" id="1_alydq"]
 [ext_resource type="Script" path="res://addons/godot_sprite/src/main_window/main_window.gd" id="1_pbjs2"]
+[ext_resource type="PackedScene" uid="uid://c2dr0xmm73455" path="res://addons/godot_sprite/src/sprite_panels/sprite_panels.tscn" id="3_s6m7h"]
 
 [node name="MainWindow" type="VBoxContainer"]
 anchors_preset = 15
@@ -15,29 +16,5 @@ script = ExtResource("1_pbjs2")
 [node name="MenuBar" parent="." instance=ExtResource("1_alydq")]
 layout_mode = 2
 
-[node name="SpritePanels" type="TabContainer" parent="."]
-layout_mode = 2
-size_flags_vertical = 3
-drag_to_rearrange_enabled = true
-
-[node name="SpritePanel" type="VBoxContainer" parent="SpritePanels"]
-layout_mode = 2
-
-[node name="Content" type="HBoxContainer" parent="SpritePanels/SpritePanel"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="ColorPicker" type="ColorPicker" parent="SpritePanels/SpritePanel/Content"]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_constants/sv_width = 192
-theme_override_constants/sv_height = 192
-picker_shape = 2
-
-[node name="CentralPanel" type="VBoxContainer" parent="SpritePanels/SpritePanel/Content"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ToolBar" type="VBoxContainer" parent="SpritePanels/SpritePanel/Content"]
-custom_minimum_size = Vector2(72, 0)
+[node name="SpritePanels" parent="." instance=ExtResource("3_s6m7h")]
 layout_mode = 2

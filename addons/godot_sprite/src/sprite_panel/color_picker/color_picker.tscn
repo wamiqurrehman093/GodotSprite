@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdqwjcplx2css"]
+
+[ext_resource type="Script" path="res://addons/godot_sprite/src/sprite_panel/color_picker/color_picker.gd" id="1_oorym"]
+
+[node name="ColorPicker" type="ColorPicker"]
+custom_minimum_size = Vector2(256, 0)
+size_flags_vertical = 0
+theme_override_constants/sv_width = 192
+theme_override_constants/sv_height = 192
+picker_shape = 2
+script = ExtResource("1_oorym")

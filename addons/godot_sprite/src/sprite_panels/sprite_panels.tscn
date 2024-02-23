@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2dr0xmm73455"]
+
+[ext_resource type="Script" path="res://addons/godot_sprite/src/sprite_panels/sprite_panels.gd" id="1_pgklb"]
+
+[node name="SpritePanels" type="TabContainer"]
+size_flags_vertical = 3
+drag_to_rearrange_enabled = true
+script = ExtResource("1_pgklb")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3015krd1gv73"]
+
+[ext_resource type="Script" path="res://addons/godot_sprite/src/sprite_panel/sprite_panel.gd" id="1_k5icq"]
+[ext_resource type="PackedScene" uid="uid://bdqwjcplx2css" path="res://addons/godot_sprite/src/sprite_panel/color_picker/color_picker.tscn" id="1_ydk8k"]
+[ext_resource type="PackedScene" uid="uid://b7y5mq5jlajls" path="res://addons/godot_sprite/src/sprite_panel/tool_bar/tool_bar.tscn" id="2_p60wr"]
+
+[node name="SpritePanel" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k5icq")
+
+[node name="Content" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorPicker" parent="Content" instance=ExtResource("1_ydk8k")]
+layout_mode = 2
+
+[node name="CentralPanel" type="VBoxContainer" parent="Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ToolBar" parent="Content" instance=ExtResource("2_p60wr")]
+layout_mode = 2

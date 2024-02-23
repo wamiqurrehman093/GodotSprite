@@ -13,4 +13,4 @@ func _on_menu_option_selected(context):
 
 
 func create_new_sprite(context: Dictionary):
-	print(context)
+	$SpritePanels.create_new_sprite(context)
