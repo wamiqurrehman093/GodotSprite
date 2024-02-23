@@ -7,7 +7,7 @@
 [node name="NewSpriteWindow" type="ConfirmationDialog"]
 title = "New Sprite"
 initial_position = 2
-size = Vector2i(360, 240)
+size = Vector2i(360, 267)
 visible = true
 script = ExtResource("1_on6m1")
 
@@ -35,7 +35,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Panel/Content/Size"]
 layout_mode = 2
-text = "--Size:--------------------------------------------------------"
+text = "--Size:-----------------------------------------------------------"
 clip_text = true
 
 [node name="Width" type="HBoxContainer" parent="Panel/Content/Size"]
@@ -46,10 +46,14 @@ custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 text = "Width:"
 
-[node name="LineEdit" type="LineEdit" parent="Panel/Content/Size/Width"]
+[node name="SpinBox" type="SpinBox" parent="Panel/Content/Size/Width"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "16px"
+min_value = 1.0
+max_value = 1000.0
+value = 16.0
+suffix = "px"
+select_all_on_focus = true
 
 [node name="Height" type="HBoxContainer" parent="Panel/Content/Size"]
 layout_mode = 2
@@ -59,17 +63,21 @@ custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 text = "Height:"
 
-[node name="LineEdit" type="LineEdit" parent="Panel/Content/Size/Height"]
+[node name="SpinBox" type="SpinBox" parent="Panel/Content/Size/Height"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "16px"
+min_value = 1.0
+max_value = 1000.0
+value = 16.0
+suffix = "px"
+select_all_on_focus = true
 
 [node name="Background" type="VBoxContainer" parent="Panel/Content"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Panel/Content/Background"]
 layout_mode = 2
-text = "--Background:--------------------------------------------"
+text = "--Background:-----------------------------------------------"
 clip_text = true
 
 [node name="Options" type="HBoxContainer" parent="Panel/Content/Background"]
